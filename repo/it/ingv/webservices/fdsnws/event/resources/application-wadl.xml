@@ -89,9 +89,9 @@ The fdsnws/event web service return event (earthquake) information from our cata
 				</param>
 				<param name="offset" style="query" type="xs:integer" default="1"><doc title="offset" xml:lang="en">Return results starting at the event count specified, starting at 1.</doc></param>
 				<!-- extensions -->
-				<param name="minradiuskm" style="query" type="xs:double" default="0"><doc title="minradiuskm" xml:lang="en">Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an x-fdsn-event extension to the FDSN specification.</strong></doc></param>
-				<param name="maxradiuskm" style="query" type="xs:double" default="20037"><doc title="maxradiuskm" xml:lang="en">Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an x-fdsn-event extension to the FDSN specification.</strong></doc></param>
-				<param name="asofdate" style="query" type="xs:dateTime" default=""><doc title="asofdate" xml:lang="en">Limit to metadata current in database at date asofdate. <strong>This is an x-fdsn-event to the FDSN specification, optionally activated by the datacenter.</strong></doc></param>
+				<param name="minradiuskm" style="query" type="xs:double" default="0"><doc title="minradiuskm" xml:lang="en">Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an x-fdsnws-event extension to the FDSN specification.</strong></doc></param>
+				<param name="maxradiuskm" style="query" type="xs:double" default="20037"><doc title="maxradiuskm" xml:lang="en">Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an x-fdsnws-event extension to the FDSN specification.</strong></doc></param>
+				<param name="asofdate" style="query" type="xs:dateTime" default=""><doc title="asofdate" xml:lang="en">Limit to metadata current in database at date asofdate. <strong>This is an x-fdsnws-event to the FDSN specification, optionally activated by the datacenter.</strong></doc></param>
 
 			</request>
 			<response status="200">

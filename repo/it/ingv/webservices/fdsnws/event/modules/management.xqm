@@ -2,7 +2,7 @@
  : Management module.
  :
  : @author   Stefano Pintore
- : @see      https://github.com/INGV/x-fdsn-event
+ : @see      https://github.com/INGV/x-fdsnws-event
  : @version  1.0
  :)
 xquery version '3.1';
