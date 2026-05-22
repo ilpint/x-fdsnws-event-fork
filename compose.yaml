@@ -15,14 +15,14 @@ services:
     ports:
       - 8081:80
     depends_on:
-      - x-fdsn-event-1
-#      - x-fdsn-event-2
+      - x-fdsnws-event-1
+#      - x-fdsnws-event-2
     networks:
             - event-net
 
-  x-fdsn-event-1:
+  x-fdsnws-event-1:
     restart: "unless-stopped"
-    container_name: x-fdsn-event-1
+    container_name: x-fdsnws-event-1
     build:
       context: .
       target: deploy
@@ -44,9 +44,9 @@ services:
     networks:
             - event-net
 
-  x-fdsn-event-2:
+  x-fdsnws-event-2:
     restart: "unless-stopped"
-    container_name: x-fdsn-event-2
+    container_name: x-fdsnws-event-2
     build:
       context: .
       target: deploy
@@ -68,9 +68,9 @@ services:
     networks:
             - event-net
   
-  x-fdsn-event-3:
+  x-fdsnws-event-3:
     restart: "unless-stopped"
-    container_name: x-fdsn-event-3
+    container_name: x-fdsnws-event-3
     build:
       context: .
       target: deploy
@@ -92,9 +92,9 @@ services:
     networks:
             - event-net
   
-  x-fdsn-event-4:
+  x-fdsnws-event-4:
     restart: "unless-stopped"
-    container_name: x-fdsn-event-4
+    container_name: x-fdsnws-event-4
     build:
       context: .
       target: deploy
