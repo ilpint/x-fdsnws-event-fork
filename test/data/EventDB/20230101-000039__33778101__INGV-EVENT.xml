@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<q:quakeml xmlns:q="http://quakeml.org/xmlns/quakeml/1.2" xmlns="http://quakeml.org/xmlns/bed/1.2" xmlns:ingv="http://webservices.ingv.it/fdsnws/event/1">
+  <eventParameters publicID="smi:webservices.ingv.it/fdsnws/event/1/query">
+    <event publicID="smi:webservices.ingv.it/fdsnws/event/1/query?eventId=33778101">
+      <type>earthquake</type>
+      <description>
+        <type>region name</type>
+        <text>3 km NW Norcia (PG)</text>
+      </description>
+      <preferredMagnitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?magnitudeId=121439591</preferredMagnitudeID>
+      <preferredOriginID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</preferredOriginID>
+      <creationInfo>
+        <agencyID>INGV</agencyID>
+        <author>hew10_mole#MOD_EQASSEMBLE</author>
+        <creationTime>2023-01-01T00:00:59</creationTime>
+        <ingv:id_locator>480490</ingv:id_locator>
+      </creationInfo>
+      <origin publicID="smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021">
+        <evaluationMode>manual</evaluationMode>
+        <type>hypocenter</type>
+        <time>
+          <value>2023-01-01T00:00:39.090000</value>
+          <uncertainty>0.1</uncertainty>
+        </time>
+        <latitude>
+          <value>42.8138</value>
+          <uncertainty>0.0036</uncertainty>
+        </latitude>
+        <longitude>
+          <value>13.0685</value>
+          <uncertainty>0.0074</uncertainty>
+        </longitude>
+        <depth>
+          <value>8300</value>
+          <uncertainty>500</uncertainty>
+        </depth>
+        <depthType>from location</depthType>
+        <originUncertainty>
+          <preferredDescription>uncertainty ellipse</preferredDescription>
+          <horizontalUncertainty>580.0</horizontalUncertainty>
+          <minHorizontalUncertainty>202</minHorizontalUncertainty>
+          <maxHorizontalUncertainty>584</maxHorizontalUncertainty>
+          <azimuthMaxHorizontalUncertainty>57</azimuthMaxHorizontalUncertainty>
+          <confidenceLevel>68</confidenceLevel>
+        </originUncertainty>
+        <quality>
+          <azimuthalGap>195</azimuthalGap>
+          <associatedPhaseCount>18</associatedPhaseCount>
+          <usedPhaseCount>11</usedPhaseCount>
+          <standardError>0.13</standardError>
+          <minimumDistance>0.00000</minimumDistance>
+          <maximumDistance>0.33545</maximumDistance>
+          <associatedStationCount>14</associatedStationCount>
+          <usedStationCount>7</usedStationCount>
+        </quality>
+        <evaluationStatus>reviewed</evaluationStatus>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <version>100</version>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:quality>AD</ingv:quality>
+        </creationInfo>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211106031">
+          <phase>Pg</phase>
+          <timeResidual>17.77</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464641</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211106011">
+          <phase>Pn</phase>
+          <timeResidual>0.93</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464621</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211106021">
+          <phase>Pn</phase>
+          <timeResidual>1.15</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464631</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211106001">
+          <phase>Sn</phase>
+          <timeResidual>5.11</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464611</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105991">
+          <phase>Sn</phase>
+          <timeResidual>-1.61</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464601</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105981">
+          <phase>Pg</phase>
+          <timeResidual>9.83</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464591</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105971">
+          <phase>Pn</phase>
+          <timeResidual>0.54</timeResidual>
+          <timeWeight>0</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464581</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105941">
+          <phase>S</phase>
+          <azimuth>133</azimuth>
+          <distance>0.2680</distance>
+          <timeResidual>-0.09</timeResidual>
+          <timeWeight>72</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464551</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>106</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105921">
+          <phase>S</phase>
+          <azimuth>328</azimuth>
+          <distance>0.2257</distance>
+          <timeResidual>-0.17</timeResidual>
+          <timeWeight>48</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464531</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>108</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105951">
+          <phase>P</phase>
+          <azimuth>38</azimuth>
+          <distance>0.3166</distance>
+          <timeResidual>-0.2</timeResidual>
+          <timeWeight>23</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464561</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>50</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105961">
+          <phase>P</phase>
+          <azimuth>59</azimuth>
+          <distance>0.3354</distance>
+          <timeResidual>0.06</timeResidual>
+          <timeWeight>24</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464571</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>50</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105931">
+          <phase>P</phase>
+          <azimuth>133</azimuth>
+          <distance>0.2680</distance>
+          <timeResidual>-0.06</timeResidual>
+          <timeWeight>48</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464541</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>106</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105901">
+          <phase>P</phase>
+          <azimuth>4</azimuth>
+          <distance>0.2230</distance>
+          <timeResidual>-0.08</timeResidual>
+          <timeWeight>49</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464511</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>109</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105911">
+          <phase>P</phase>
+          <azimuth>328</azimuth>
+          <distance>0.2257</distance>
+          <timeResidual>0.05</timeResidual>
+          <timeWeight>49</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464521</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>108</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105891">
+          <phase>S</phase>
+          <azimuth>42</azimuth>
+          <distance>0.1313</distance>
+          <timeResidual>-0.03</timeResidual>
+          <timeWeight>100</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464501</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>120</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105881">
+          <phase>P</phase>
+          <azimuth>42</azimuth>
+          <distance>0.1313</distance>
+          <timeResidual>0.14</timeResidual>
+          <timeWeight>98</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464491</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>120</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105871">
+          <phase>S</phase>
+          <azimuth>60</azimuth>
+          <distance>0.0387</distance>
+          <timeResidual>-0.12</timeResidual>
+          <timeWeight>100</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464481</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>153</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+        <arrival publicID="smi:webservices.ingv.it/fdsnws/event/1/query?arrivalId=2211105861">
+          <phase>P</phase>
+          <azimuth>60</azimuth>
+          <distance>0.0387</distance>
+          <timeResidual>0.24</timeResidual>
+          <timeWeight>98</timeWeight>
+          <pickID>smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464471</pickID>
+          <earthModelID>smi:webservices.ingv.it/fdsnws/event/1/query?earthModelId=1</earthModelID>
+          <takeoffAngle>
+            <value>153</value>
+          </takeoffAngle>
+          <creationInfo>
+            <agencyID>INGV </agencyID>
+            <author>SURVEY-INGV</author>
+            <creationTime>2023-01-01T00:10:26</creationTime>
+          </creationInfo>
+        </arrival>
+      </origin>
+      <stationMagnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?stationMagnitudeId=amp-648380891">
+        <mag>
+          <value>1.1</value>
+        </mag>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <amplitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031341</amplitudeID>
+        <type>ML</type>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <comment>
+          <text>original mag_type: ML</text>
+        </comment>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHN" locationCode=""/>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?stationMagnitudeId=amp-648380901">
+        <mag>
+          <value>0.9</value>
+        </mag>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <amplitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031351</amplitudeID>
+        <type>ML</type>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <comment>
+          <text>original mag_type: ML</text>
+        </comment>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHE" locationCode=""/>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?stationMagnitudeId=amp-648380951">
+        <mag>
+          <value>0.5</value>
+        </mag>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <amplitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031401</amplitudeID>
+        <type>ML</type>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <comment>
+          <text>original mag_type: ML</text>
+        </comment>
+        <waveformID networkCode="IV" stationCode="FDMO" channelCode="HHE" locationCode=""/>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?stationMagnitudeId=amp-648380961">
+        <mag>
+          <value>0.6</value>
+        </mag>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <amplitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031411</amplitudeID>
+        <type>ML</type>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <comment>
+          <text>original mag_type: ML</text>
+        </comment>
+        <waveformID networkCode="IV" stationCode="FDMO" channelCode="HHN" locationCode=""/>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?stationMagnitudeId=amp-648380971">
+        <mag>
+          <value>0.6</value>
+        </mag>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <amplitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031421</amplitudeID>
+        <type>ML</type>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <comment>
+          <text>original mag_type: ML</text>
+        </comment>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHE" locationCode=""/>
+      </stationMagnitude>
+      <stationMagnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?stationMagnitudeId=amp-648380981">
+        <mag>
+          <value>0.9</value>
+        </mag>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <amplitudeID>smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031431</amplitudeID>
+        <type>ML</type>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <comment>
+          <text>original mag_type: ML</text>
+        </comment>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHN" locationCode=""/>
+      </stationMagnitude>
+      <magnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?magnitudeId=121439591">
+        <stationCount>6</stationCount>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113221021</originID>
+        <type>ML</type>
+        <mag>
+          <value>0.8</value>
+          <uncertainty>0.2</uncertainty>
+        </mag>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=1</methodID>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:mag_quality>BB</ingv:mag_quality>
+        </creationInfo>
+        <comment>
+          <text>Local magnitude</text>
+        </comment>
+      </magnitude>
+      <magnitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?magnitudeId=121439521">
+        <stationCount>2</stationCount>
+        <originID>smi:webservices.ingv.it/fdsnws/event/1/query?originId=113220961</originID>
+        <type>ML</type>
+        <mag>
+          <value>4.2</value>
+          <uncertainty>2.7</uncertainty>
+        </mag>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodId=3</methodID>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>hew10_mole#MOD_LOCALMAG_FINAL</author>
+          <creationTime>2023-01-01T00:03:27</creationTime>
+          <ingv:mag_quality>D</ingv:mag_quality>
+        </creationInfo>
+        <comment>
+          <text>Earthworm Localmag Median</text>
+        </comment>
+      </magnitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031241">
+        <genericAmplitude>
+          <value>0.00003575</value>
+        </genericAmplitude>
+        <period>
+          <value>1.4</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0.7</begin>
+          <end>0</end>
+          <reference>2023-01-01T00:00:54.67</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>hew10_mole#MOD_LOCALMAG_FINAL</author>
+          <creationTime>2023-01-01T00:03:27</creationTime>
+          <ingv:amp1>-0.0358</ingv:amp1>
+          <ingv:amp2>0.0357</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:54.670000</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:53.970000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031251">
+        <genericAmplitude>
+          <value>0.00004895000000000001</value>
+        </genericAmplitude>
+        <period>
+          <value>0.56</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0.28</begin>
+          <end>0</end>
+          <reference>2023-01-01T00:00:52.55</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>hew10_mole#MOD_LOCALMAG_FINAL</author>
+          <creationTime>2023-01-01T00:03:27</creationTime>
+          <ingv:amp1>-0.0245</ingv:amp1>
+          <ingv:amp2>0.0734</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:52.270000</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:52.550000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHN" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031261">
+        <genericAmplitude>
+          <value>0.0787</value>
+        </genericAmplitude>
+        <period>
+          <value>1.28</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.64</end>
+          <reference>2023-01-01T00:01:58.36</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>hew10_mole#MOD_LOCALMAG_FINAL</author>
+          <creationTime>2023-01-01T00:03:27</creationTime>
+          <ingv:amp1>-143</ingv:amp1>
+          <ingv:amp2>14.4</ingv:amp2>
+          <ingv:time1>2023-01-01T00:01:58.360000</ingv:time1>
+          <ingv:time2>2023-01-01T00:01:59.000000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SAMA" channelCode="EHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031271">
+        <genericAmplitude>
+          <value>0.1005</value>
+        </genericAmplitude>
+        <period>
+          <value>1.34</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.67</end>
+          <reference>2023-01-01T00:01:44.49</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>hew10_mole#MOD_LOCALMAG_FINAL</author>
+          <creationTime>2023-01-01T00:03:27</creationTime>
+          <ingv:amp1>733</ingv:amp1>
+          <ingv:amp2>934</ingv:amp2>
+          <ingv:time1>2023-01-01T00:01:45.160000</ingv:time1>
+          <ingv:time2>2023-01-01T00:01:44.490000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SAMA" channelCode="EHN" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031341">
+        <genericAmplitude>
+          <value>0.00004895000000000001</value>
+        </genericAmplitude>
+        <period>
+          <value>0.56</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0.28</begin>
+          <end>0</end>
+          <reference>2023-01-01T00:00:52.55</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.0245</ingv:amp1>
+          <ingv:amp2>0.0734</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:52.270000</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:52.550000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHN" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031351">
+        <genericAmplitude>
+          <value>0.00003575</value>
+        </genericAmplitude>
+        <period>
+          <value>0.6</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.3</end>
+          <reference>2023-01-01T00:00:54.67</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.0358</ingv:amp1>
+          <ingv:amp2>0.0357</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:54.670000</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:54.970000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031361">
+        <genericAmplitude>
+          <value>0.1005</value>
+        </genericAmplitude>
+        <period>
+          <value>0.66</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0.33</begin>
+          <end>0</end>
+          <reference>2023-01-01T00:01:45.49</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>733</ingv:amp1>
+          <ingv:amp2>934</ingv:amp2>
+          <ingv:time1>2023-01-01T00:01:45.160000</ingv:time1>
+          <ingv:time2>2023-01-01T00:01:45.490000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SAMA" channelCode="EHN" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031371">
+        <genericAmplitude>
+          <value>0.0787</value>
+        </genericAmplitude>
+        <period>
+          <value>0.72</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0.36</begin>
+          <end>0</end>
+          <reference>2023-01-01T00:01:58.36</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-143</ingv:amp1>
+          <ingv:amp2>14.4</ingv:amp2>
+          <ingv:time1>2023-01-01T00:01:58.360000</ingv:time1>
+          <ingv:time2>2023-01-01T00:01:58.000000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SAMA" channelCode="EHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031381">
+        <genericAmplitude>
+          <value>0.00023045379</value>
+        </genericAmplitude>
+        <period>
+          <value>0.18</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.09</end>
+          <reference>2023-01-01T00:00:45.00</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.08063408</ingv:amp1>
+          <ingv:amp2>0.3802735</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:46.879000</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:45.997900</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MC2" channelCode="EHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031391">
+        <genericAmplitude>
+          <value>0.00025595974000000007</value>
+        </genericAmplitude>
+        <period>
+          <value>0.22</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.11</end>
+          <reference>2023-01-01T00:00:45.00</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>0.04899172</ingv:amp1>
+          <ingv:amp2>0.5609112</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:46.107900</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:45.997900</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MC2" channelCode="EHN" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031401">
+        <genericAmplitude>
+          <value>0.0000200421</value>
+        </genericAmplitude>
+        <period>
+          <value>0.12</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0.06</begin>
+          <end>0</end>
+          <reference>2023-01-01T00:00:49.01</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.01187205</ingv:amp1>
+          <ingv:amp2>0.02821215</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:48.952100</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:49.121000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="FDMO" channelCode="HHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031411">
+        <genericAmplitude>
+          <value>0.0000235181</value>
+        </genericAmplitude>
+        <period>
+          <value>0.24</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.12</end>
+          <reference>2023-01-01T00:00:48.91</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.03026872</ingv:amp1>
+          <ingv:amp2>0.01676748</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:48.912100</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:49.321000</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="FDMO" channelCode="HHN" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031421">
+        <genericAmplitude>
+          <value>0.000026804609999999998</value>
+        </genericAmplitude>
+        <period>
+          <value>0.12</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.06</end>
+          <reference>2023-01-01T00:00:48.22</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.02494902</ingv:amp1>
+          <ingv:amp2>0.0286602</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:48.276100</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:48.216100</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHE" locationCode=""/>
+      </amplitude>
+      <amplitude publicID="smi:webservices.ingv.it/fdsnws/event/1/query?amplitudeId=amp-573031431">
+        <genericAmplitude>
+          <value>0.000049535880000000007</value>
+        </genericAmplitude>
+        <period>
+          <value>0.28</value>
+        </period>
+        <unit>m</unit>
+        <category>other</category>
+        <type>AML</type>
+        <comment>
+          <text>Wood-Anderson amplitude</text>
+        </comment>
+        <timeWindow>
+          <begin>0</begin>
+          <end>0.14</end>
+          <reference>2023-01-01T00:00:48.23</reference>
+        </timeWindow>
+        <creationInfo>
+          <agencyID>INGV</agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+          <ingv:amp1>-0.05205594</ingv:amp1>
+          <ingv:amp2>0.04701582</ingv:amp2>
+          <ingv:time1>2023-01-01T00:00:48.226100</ingv:time1>
+          <ingv:time2>2023-01-01T00:00:48.366100</ingv:time2>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHN" locationCode=""/>
+      </amplitude>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649463651">
+        <time>
+          <value>2023-01-01T00:00:37.96</value>
+          <uncertainty>0.3</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:00:53</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="PIEI" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649463691">
+        <time>
+          <value>2023-01-01T00:00:38.63</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:00:53</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="FRON" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649463661">
+        <time>
+          <value>2023-01-01T00:00:39.18</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:00:53</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="NARO" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649463681">
+        <time>
+          <value>2023-01-01T00:00:39.19</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>negative</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:00:53</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SSFR" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649463671">
+        <time>
+          <value>2023-01-01T00:00:41.06</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:00:53</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="NRCA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464471">
+        <time>
+          <value>2023-01-01T00:00:41.21</value>
+          <uncertainty>0.1</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="NRCA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464481">
+        <time>
+          <value>2023-01-01T00:00:42.23</value>
+          <uncertainty>0.1</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="NRCA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649463701">
+        <time>
+          <value>2023-01-01T00:00:42.55</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:00:53</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MC2" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464491">
+        <time>
+          <value>2023-01-01T00:00:42.60</value>
+          <uncertainty>0.1</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MC2" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464511">
+        <time>
+          <value>2023-01-01T00:00:44.24</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>negative</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="FDMO" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464131">
+        <time>
+          <value>2023-01-01T00:00:44.24</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>negative</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:01:00</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="FDMO" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464521">
+        <time>
+          <value>2023-01-01T00:00:44.43</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464141">
+        <time>
+          <value>2023-01-01T00:00:44.43</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:01:00</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464501">
+        <time>
+          <value>2023-01-01T00:00:44.89</value>
+          <uncertainty>0.1</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MC2" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464541">
+        <time>
+          <value>2023-01-01T00:00:45.22</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SMA1" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464161">
+        <time>
+          <value>2023-01-01T00:00:45.66</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:01:00</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SMA1" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464121">
+        <time>
+          <value>2023-01-01T00:00:46.07</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:01:00</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464561">
+        <time>
+          <value>2023-01-01T00:00:46.07</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="GUMA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464571">
+        <time>
+          <value>2023-01-01T00:00:46.65</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MF5" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464151">
+        <time>
+          <value>2023-01-01T00:00:46.65</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:01:00</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="MF5" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464531">
+        <time>
+          <value>2023-01-01T00:00:48.08</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CESI" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464551">
+        <time>
+          <value>2023-01-01T00:00:49.73</value>
+          <uncertainty>0.3</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SMA1" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464351">
+        <time>
+          <value>2023-01-01T00:01:11.94</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="PTRJ" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464581">
+        <time>
+          <value>2023-01-01T00:01:11.94</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="PTRJ" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464361">
+        <time>
+          <value>2023-01-01T00:01:38.98</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="MN" stationCode="SENA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464591">
+        <time>
+          <value>2023-01-01T00:01:38.98</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="MN" stationCode="SENA" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464341">
+        <time>
+          <value>2023-01-01T00:01:44.29</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SAMA" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464601">
+        <time>
+          <value>2023-01-01T00:01:44.29</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SAMA" channelCode="EHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464611">
+        <time>
+          <value>2023-01-01T00:01:45.21</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="TOLF" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464331">
+        <time>
+          <value>2023-01-01T00:01:45.21</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>S</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="TOLF" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464391">
+        <time>
+          <value>2023-01-01T00:01:45.65</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>negative</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SPS2" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464621">
+        <time>
+          <value>2023-01-01T00:01:45.65</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>negative</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="SPS2" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464381">
+        <time>
+          <value>2023-01-01T00:01:45.82</value>
+          <uncertainty>0.6</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CAR1" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464631">
+        <time>
+          <value>2023-01-01T00:01:45.82</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>undecidable</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="CAR1" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464371">
+        <time>
+          <value>2023-01-01T00:01:48.72</value>
+          <uncertainty>1.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=1401</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>automatic</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>hew10_mole#MOD_EQASSEMBLE</author>
+          <creationTime>2023-01-01T00:03:02</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="BULG" channelCode="HHZ" locationCode=""/>
+      </pick>
+      <pick publicID="smi:webservices.ingv.it/fdsnws/event/1/query?pickId=649464641">
+        <time>
+          <value>2023-01-01T00:01:48.72</value>
+          <uncertainty>3.0</uncertainty>
+        </time>
+        <methodID>smi:webservices.ingv.it/fdsnws/event/1/query?methodID=9</methodID>
+        <onset>questionable</onset>
+        <phaseHint>P</phaseHint>
+        <polarity>positive</polarity>
+        <evaluationMode>manual</evaluationMode>
+        <creationInfo>
+          <agencyID>INGV </agencyID>
+          <author>SURVEY-INGV</author>
+          <creationTime>2023-01-01T00:10:26</creationTime>
+        </creationInfo>
+        <waveformID networkCode="IV" stationCode="BULG" channelCode="HHZ" locationCode=""/>
+      </pick>
+    </event>
+  </eventParameters>
+</q:quakeml>
