@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:q="http://quakeml.org/xmlns/quakeml/1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<doc title="Event - Web service Documentation" xml:lang="en">
+<div>
+The fdsnws/event web service return event (earthquake) information from our catalogs. The results are returned as XML in &#xA0;
+	<a href="https://quake.ethz.ch/quakeml">QuakeML</a>&#xA0;
+	format (
+	<a href='https://quake.ethz.ch/quakeml/docs/xml?action=AttachFile&amp;;do=get&amp;target=QuakeML-BED-1.2.xsd'>schema</a>
+	), but may also be requested in text format.
+</div>
+<div>	To retrieve data from the event service, submit a request using the GET HTTP method. </div>
+<div>	PUT and DELETE methods are INGV extension to the standard, they need authorization and are not accessible to the public. </div>
+
+<div>Dedicated clients that use the fdsnws-event service can be found on the 	<a href="http://service.iris.edu/clients">IRIS DMC Client list page</a>. </div>
+<div>
+	This service is an implementation of the
+ 		<a href="https://www.fdsn.org/webservices/fdsnws-event-1.2.pdf">FDSN event web service specification version 1.2</a>
+</div>
+<div> 	Below is a full list of service parameters and their usage. </div>
+</doc>
+	<resources base="http://your.webservice.com/fdsnws/event/1/">
+		<resource path="version">
+			<method id="version" name="GET">
+			<doc title="Version" xml:lang="en">Get full service version.</doc>
+			<response status="200">
+				<representation mediaType="text/plain"/>
+			</response>
+			</method>
+		</resource>
+		<resource path="catalogs">
+			<method id="catalogs" name="GET">
+				<doc title="Catalogs" xml:lang="en">Returns a list of available catalogs from which events can be selected.</doc>
+			<response status="200">
+				<representation mediaType="application/xml"/>
+			</response>
+			</method>
+		</resource>
+		<resource path="contributors">
+			<method id="contributors" name="GET">
+			<doc title="Contributors" xml:lang="en">Returns a list of contributors (agencies, etc.) across all catalogs from which events can be selected.</doc>
+			<response status="200">
+				<representation mediaType="application/xml"/>
+			</response>
+			</method>
+		</resource>
+		<resource path="application.wadl">
+			<method id="application.wadl" name="GET">
+			<doc title="Application" xml:lang="en">Get service description as application.wadl file.</doc>
+			<response status="200">
+				<representation mediaType="application/xml"/>
+			</response>
+			</method>
+		</resource>
+		<resource path="query">
+			<method id="query" name="GET">
+			<doc title="Query" xml:lang="en">Get event in QuakeML format. Provide a series of parameter-value pairs in the URL. Each parameter-value pair must be separated from the others by an &amp; and no space. A GET request may take one of the following general forms:
+  <div>/query? [geographic-constraints] [depth-constraints] [temporal-constraints] [magnitude-constraints] [includeallmagnitudes] [includeallorigins] [includearrivals] [format-option] [nodata=404]</div>
+  <div>/query? (id-options) [includeallmagnitudes] [includeallorigins] [includearrivals] [format-option] [nodata=404]</div>
+
+ </doc>
+			<request>
+				<param name="starttime" style="query" type="xs:dateTime"><doc title="starttime" xml:lang="en">Limit to events on or after the specified start time.</doc></param>
+				<param name="endtime" style="query" type="xs:dateTime"><doc title="endtime" xml:lang="en">Limit to events on or before the specified end time.</doc></param>
+				<param name="updatedafter" style="query" type="xs:dateTime"><doc title="updatedafter" xml:lang="en">Limit to metadata updated after specified time; updates are data center specific.</doc></param>
+				<param name="minlatitude" style="query" type="xs:double" default="-90"><doc title="minlatitude" xml:lang="en">Specify southern boundary for search.</doc></param>
+				<param name="maxlatitude" style="query" type="xs:double" default="90"><doc title="maxlatitude" xml:lang="en">Specify northern boundary for search.</doc></param>
+				<param name="minlongitude" style="query" type="xs:double" default="-180"><doc title="minlongitude" xml:lang="en">Specify western boundary for search.</doc></param>
+				<param name="maxlongitude" style="query" type="xs:double" default="180"><doc title="maxlongitude" xml:lang="en">Specify eastern boundary for search.</doc></param>
+				<param name="latitude" style="query" type="xs:double" default="0"><doc title="latitude" xml:lang="en">Specify the central latitude point for a radial search.</doc></param>
+				<param name="longitude" style="query" type="xs:double" default="0"><doc title="longitude" xml:lang="en">Specify the central longitude point for a radial search.</doc></param>
+				<param name="minradius" style="query" type="xs:double" default="0"><doc title="minradius" xml:lang="en">Specify minimum distance from the geographic point defined by latitude and longitude. Degrees.</doc></param>
+				<param name="maxradius" style="query" type="xs:double" default="180"><doc title="maxradius" xml:lang="en">Specify maximum distance from the geographic point defined by latitude and longitude. Degrees.</doc></param>
+				<param name="mindepth" style="query" type="xs:double"><doc title="mindepth" xml:lang="en">Limit to events with depth more than the specified minimum.</doc></param>
+				<param name="maxdepth" style="query" type="xs:double"><doc title="maxdepth" xml:lang="en">Limit to events with depth less than the specified maximum.</doc></param>
+				<param name="minmagnitude" style="query" type="xs:double"><doc title="minmagnitude" xml:lang="en">Limit to events with magnitude more than the specified minimum.</doc></param>
+				<param name="maxmagnitude" style="query" type="xs:double"><doc title="maxmagnitude" xml:lang="en">Limit to events with magnitude less than the specified maximum.</doc></param>
+				<param name="magnitudetype" style="query" type="xs:string"><doc title="magnitudetype" xml:lang="en">Specify a magnitude type to use for testing the minimum and maximum limits.</doc></param>
+				<param name="eventtype" style="query" type="xs:string"><doc title="eventtype" xml:lang="en">Limit to events with a specified eventType. The parameter value can be a single item, a comma-separated list of items. Allowed values are from QuakeML or unknown if eventType is not given.</doc></param>
+				<param name="includeallmagnitudes" style="query" type="xs:boolean"><doc title="includeallmagnitudes" xml:lang="en">Specify if all magnitudes for the event should be included, default includes the preferred magnitude only.</doc></param>
+				<param name="includeallorigins" style="query" type="xs:boolean"><doc title="includeallorigins" xml:lang="en">Specify if all origins for the event should be included, default is data center dependent but is suggested to be the preferred origin only.</doc></param>
+				<param name="includearrivals" style="query" type="xs:boolean"><doc title="includearrivals" xml:lang="en">Specify if phase arrivals should be included.</doc></param>
+				<param name="eventid" style="query" type="xs:string"><doc title="eventid" xml:lang="en">Select a specific event by ID; event identifiers are data center specific.</doc></param>
+				<param name="limit" style="query" type="xs:integer"><doc title="limit" xml:lang="en">Limit the results to the specified number of events.</doc></param>
+				<param name="orderby" style="query" type="xs:string" default="time"><doc title="orderby" xml:lang="en">Order the result by time or magnitude, descending or ascending.</doc>
+					<option value="time"/>
+					<option value="time-asc"/>
+					<option value="magnitude"/>
+					<option value="magnitude-asc"/>
+				</param>
+				<param name="offset" style="query" type="xs:integer" default="1"><doc title="offset" xml:lang="en">Return results starting at the event count specified, starting at 1.</doc></param>
+				<!-- extensions -->
+				<param name="minradiuskm" style="query" type="xs:double" default="0"><doc title="minradiuskm" xml:lang="en">Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an x-fdsn-event extension to the FDSN specification.</strong></doc></param>
+				<param name="maxradiuskm" style="query" type="xs:double" default="20037"><doc title="maxradiuskm" xml:lang="en">Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an x-fdsn-event extension to the FDSN specification.</strong></doc></param>
+				<param name="asofdate" style="query" type="xs:dateTime" default=""><doc title="asofdate" xml:lang="en">Limit to metadata current in database at date asofdate. <strong>This is an x-fdsn-event to the FDSN specification, optionally activated by the datacenter.</strong></doc></param>
+
+			</request>
+			<response status="200">
+				<doc title="" xml:lang="en">Success.</doc>
+				<representation mediaType="application/xml" element="q:QuakeML">
+					<doc title="QuakeML" xml:lang="en">QuakeML document</doc>
+				</representation>
+			</response>
+			<response status="204">
+			<doc title="" xml:lang="en">Nodata.</doc>
+			</response>
+			<response status="400">
+            <doc title="" xml:lang="en">Bad request due to improper specification, unrecognized parameter, duplicate identifier, etc..</doc>
+			</response>
+			<response status="404">
+			<doc title="" xml:lang="en">Alternate to 204 (set via the 'nodata' parameter), normally used for results returned to a web browser.</doc>
+			</response>
+			<response status="413">
+			<doc title="" xml:lang="en">Request would result in too much data being returned or the request itself is too large returned error message should include the service limitations in the detailed description.</doc>
+			</response>
+			<response status="414">
+			<doc title="" xml:lang="en">Request URI too large.</doc>
+			</response>
+			<response status="500">
+			<doc title="" xml:lang="en">Internal server error.</doc>
+			</response>
+			<response status="503">
+			<doc title="" xml:lang="en">Service temporarily unavailable, used in maintenance and error conditions</doc>
+			</response>
+			</method>
+		</resource>
+		<resource path="event">
+			<method id="event" name="PUT">
+			<doc title="Event" xml:lang="en">Put event Quakeml file into database. Extension to fdsnws/event standard</doc>
+			<request>
+				<param name="filename" style="query" type="xs:string"><doc title="filename" xml:lang="en">Filename in format PROVIDER_CODE.xml.</doc></param>
+				<param name="dbname" style="query" type="xs:string"><doc title="dbname" xml:lang="en">Destination database name.</doc></param>
+				<param name="upindex" style="query" type="xs:boolean"><doc title="upindex" xml:lang="en">Optionally updates indexes.</doc></param>
+			</request>
+			<response status="200">
+			<doc title="" xml:lang="en">Success.</doc>
+			</response>
+			<response status="204">
+			<doc title="" xml:lang="en">Nodata.</doc>
+			</response>
+			<response status="400">
+            <doc title="" xml:lang="en">Bad request due to improper specification, unrecognized parameter, duplicate identifier, etc..</doc>
+			</response>
+			<response status="401">
+			<doc title="" xml:lang="en">Unauthorized, authentication required.</doc>
+			</response>
+			<response status="403">
+			<doc title="" xml:lang="en">Authentication failed or access blocked to restricted data.</doc>
+			</response>
+			<response status="500">
+			<doc title="" xml:lang="en">Internal server error.</doc>
+			</response>
+			<response status="503">
+			<doc title="" xml:lang="en">Service temporarily unavailable, used in maintenance and error conditions</doc>
+			</response>
+			</method>
+		</resource>
+	</resources>
+</application>

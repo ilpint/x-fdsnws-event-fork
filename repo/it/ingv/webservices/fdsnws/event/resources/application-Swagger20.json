@@ -1,0 +1,1371 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Event Web Service Documentation",
+    "description": "The fdsnws/event web service returns  event (earthquake) information from our catalogs. The results are returned as XML in [QuakeML](https://quake.ethz.ch/quakeml) format ([schema](https://quake.ethz.ch/quakeml/docs/xml?action=AttachFile&do=get&target=QuakeML-BED-1.2.xsd)), but may also be requested in text format. To retrieve data from the event service, submit a request using the GET HTTP method. PUT and DELETE methods are INGV extension to the standard, they need authorization and are not accessible to the public. \n# Client software\n\n Dedicated clients that use the fdsnws-event service can be found on the [IRIS DMC Client list page](http://service.iris.edu/clients). ",
+    "termsOfService": "https://data.ingv.it/docs/principles/",
+    "contact": {
+      "email": "eida@ingv.it"
+    },
+    "license": {
+      "name": "Creative Commons Attribution 4.0 International",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "version": "1.61"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8081/fdsnws/event/1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "fdsnws-event-1.2",
+      "description": "A fdsnws/event service specification compliant",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://www.fdsn.org/xml/event/"
+      }
+    },
+    {
+      "name": "fdsnws-event-1.2-INGV-Extension",
+      "description": "Extension to fdsnws/event standard"
+    }
+  ],
+  "paths": {
+    "/query": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2"
+        ],
+        "summary": "Query",
+        "description": "Get event in QuakeML format.\nProvide a series of parameter-value pairs in the URL. Each parameter-value pair must be separated from the others by an ampersand '&' and no space. Parameters marked with * are an INGV extension.\n\nTemporal semantics:\n- When history is enabled, 'asofdate' returns a reproducible snapshot of the catalog.\n- When history is disabled, 'asofdate' is accepted but ignored, and queries always return the current catalog state.\n\nQuery evaluation order:\n1. Temporal selection (asofdate)\n2. Attribute filtering (magnitude, eventtype, spatial, etc.)\n3. Ordering and pagination\n\nEach logical event appears at most once in the result set. When history is enabled, only the version valid at the selected time is returned.\n\n  ``\n/query? [geographic-constraints] [depth-constraints] [temporal-constraints] [magnitude-constraints] [includeallmagnitudes] [includeallorigins] [includearrivals] [includestationmagnitudes*] [includeamplitudes*] [includepicks*] [includeall*] [format-option] [nodata=404]\n``\n\n  ``\n/query? (id-options) [includeallmagnitudes] [includeallorigins] [includearrivals] [includestationmagnitudes*] [includeamplitudes*] [includepicks*] [includeall*] [format-option] [nodata=404]\n``\n",
+        "operationId": "Query",
+        "parameters": [
+          {
+            "name": "starttime",
+            "in": "query",
+            "description": "Limit to events on or after the specified start time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endtime",
+            "in": "query",
+            "description": "Limit to events on or before the specified end time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "minlatitude",
+            "in": "query",
+            "description": "Specify southern boundary for search.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "maxlatitude",
+            "in": "query",
+            "description": "Specify northern boundary for search.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "minlongitude",
+            "in": "query",
+            "description": "Specify western boundary for search.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "maxlongitude",
+            "in": "query",
+            "description": "Specify eastern boundary for search.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "latitude",
+            "in": "query",
+            "description": "Specify the central latitude point for a radial search.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "longitude",
+            "in": "query",
+            "description": "Specify the central longitude point for a radial search.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "minradius",
+            "in": "query",
+            "description": "Specify minimum distance from the geographic point defined by latitude and longitude. Degrees.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "maxradius",
+            "in": "query",
+            "description": "Specify maximum distance from the geographic point defined by latitude and longitude. Degrees.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "minradiuskm",
+            "in": "query",
+            "description": "Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "maxradiuskm",
+            "in": "query",
+            "description": "Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. <strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "mindepth",
+            "in": "query",
+            "description": "Limit to events with depth more than the specified minimum.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "maxdepth",
+            "in": "query",
+            "description": "Limit to events with depth less than the specified maximum.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "minmagnitude",
+            "in": "query",
+            "description": "Limit to events with magnitude more than the specified minimum.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "maxmagnitude",
+            "in": "query",
+            "description": "Limit to events with magnitude less than the specified maximum.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "magnitudetype",
+            "in": "query",
+            "description": "Specify a magnitude type to use for testing the minimum and maximum limits.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "eventtype",
+            "in": "query",
+            "description": "Limit to events with a specified eventType. The parameter value can be a single item, a comma-separated list of items. Allowed values are from QuakeML or unknown if eventType is not given.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "includeallorigins",
+            "in": "query",
+            "description": "Specify if all origins for the event should be included, default is data center dependent but is suggested to be the preferred origin only.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includeallmagnitudes",
+            "in": "query",
+            "description": "Specify if all magnitudes for the event should be included, default includes the preferred magnitude only.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includearrivals",
+            "in": "query",
+            "description": "Specify if phase arrivals should be included.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includestationmagnitudes",
+            "in": "query",
+            "description": "Specify if station magnitudes should be included.<strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includeamplitudes",
+            "in": "query",
+            "description": "Specify if amplitudes should be included.<strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includepicks",
+            "in": "query",
+            "description": "Specify if picks should be included.<strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includeall",
+            "in": "query",
+            "description": "Specify if all xml element should be included.<strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "eventid",
+            "in": "query",
+            "description": "Select a specific event by ID; event identifiers are data center specific.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "originid",
+            "in": "query",
+            "description": "Select a specific event by one of its originID; origin identifiers are data center specific. <strong>This is an INGV extension to the FDSN specification.</strong>",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the results to the specified number of events.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Return results starting at the event count specified, starting at 1.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "orderby",
+            "in": "query",
+            "description": "Order the result by time or magnitude, descending or ascending.",
+            "schema": {
+              "type": "string",
+              "default": "time",
+              "enum": [
+                "time",
+                "time-asc",
+                "magnitude",
+                "magnitude-asc"
+              ]
+            }
+          },
+          {
+            "name": "catalog",
+            "in": "query",
+            "description": "Limit to events from a specified catalog.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "contributor",
+            "in": "query",
+            "description": "Limit to events by a specified conributor.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updatedafter",
+            "in": "query",
+            "description": "Limit to events whose metadata was modified after the specified time. This parameter operates on update timestamps and does not reconstruct historical snapshots. It is mutually exclusive with 'asofdate'. Requests specifying both parameters will return HTTP 400.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "asofdate",
+            "in": "query",
+            "description": "Return the catalog snapshot as it was visible at the specified time. The query selects event versions whose validity interval satisfies vstart ≤ asofdate < vend. If the specified time precedes the first version of an event, that event is not included in the result. This parameter is ignored when history is disabled. <strong>This is an INGV extension to the FDSN specification, optionally activated by the datacenter.</strong> This parameter is mutually exclusive with 'updatedafter'. Requests specifying both parameters will return HTTP 400.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Specify output format: extended_text, hypo71phs, phsnll, JSON and GeoJSON ouput are INGV extensions",
+            "schema": {
+              "type": "string",
+              "default": "xml",
+              "enum": [
+                "xml",
+                "text",
+                "extended_text",
+                "hypo71phs",
+                "phsnll",
+                "json",
+                "geojson"
+              ]
+            }
+          },
+          {
+            "name": "nodata",
+            "in": "query",
+            "description": "Specify which HTTP status code is returned when no data is found. When nodata=404, an empty result returns HTTP 404. When nodata=204, an empty result returns HTTP 204 with no content.",
+            "schema": {
+              "type": "integer",
+              "enum": [
+                204,
+                404
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "default": ""
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/quakeml"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request due to improper specification, including invalid parameter combinations such as using 'asofdate' together with 'updatedafter'.",
+            "content": {}
+          },
+          "404": {
+            "description": "Alternate to 204 (set via the 'nodata' parameter), normally used for results returned to a web browser.",
+            "content": {}
+          },
+          "413": {
+            "description": "Request would result in too much data being returned or the request itself is too large returned error message should include the service limitations in the detailed description.",
+            "content": {}
+          },
+          "414": {
+            "description": "Request URI too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "503": {
+            "description": "Service temporarily unavailable, used in maintenance and error conditions",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+
+      "post": {
+        "tags": ["fdsnws-event-1.2-INGV-Extension"],
+        "summary": "Query (POST)",
+        "description": "POST variant of /query. Accepts a JSON list of event IDs in the request body. Output format and detail flags are provided as query parameters, same as GET. Returns QuakeML XML if format=xml, otherwise returns a text representation (text, extended_text, hypo71phs).",
+        "operationId": "QueryPost",
+        "parameters": [
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Specify output format.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "xml",
+              "enum": ["xml", "text", "extended_text", "hypo71phs", "json", "geojson"]
+            }
+          },
+          {
+            "name": "includearrivals",
+            "in": "query",
+            "description": "Specify if phase arrivals should be included.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includeallmagnitudes",
+            "in": "query",
+            "description": "Specify if all magnitudes for the event should be included.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "includeallorigins",
+            "in": "query",
+            "description": "Specify if all origins for the event should be included.",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "nodata",
+            "in": "query",
+            "description": "Specify which HTML Status code is returned when no data is found.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "enum": [204, 404],
+              "default": 204
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "JSON body containing one or more eventid values.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["eventid"],
+                "properties": {
+                  "eventid": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": { "type": "string" },
+                    "description": "List of event IDs (data center specific)."
+                  }
+                }
+              },
+              "examples": {
+                "byEventIds": {
+                  "summary": "Multiple event ids",
+                  "value": {
+                    "eventid": ["26031941", "26031942", "26031943"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/xml": {
+                "schema": { "$ref": "#/components/schemas/quakeml" }
+              },
+              "text/plain": {
+                "schema": { "type": "string", "default": "" }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request due to improper specification, unrecognized parameter, parameter value out of range, etc.",
+            "content": {}
+          },
+          "404": {
+            "description": "Alternate to 204 (set via the 'nodata' parameter), normally used for results returned to a web browser.",
+            "content": {}
+          },
+          "413": {
+            "description": "Request would result in too much data being returned or the request itself is too large; error message should include the service limitations.",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "503": {
+            "description": "Service temporarily unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      }
+
+    },
+    "/version": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2"
+        ],
+        "summary": "Version",
+        "description": "Get full service version.",
+        "operationId": "Version",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/catalogs": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2"
+        ],
+        "summary": "Catalogs",
+        "description": "Returns a list of available catalogs from which events can be selected",
+        "operationId": "Catalogs",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/contributors": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2"
+        ],
+        "summary": "Contributors",
+        "description": "Returns a list of contributors (agencies, etc.) across all catalogs from which events can be\nselected.",
+        "operationId": "Contributors",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/application.wadl": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2"
+        ],
+        "summary": "Application WADL file",
+        "description": "Get service description as application.wadl file.",
+        "operationId": "ApplicationWadl",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/event": {
+      "put": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Event management",
+        "description": "Put event Quakeml file into database.",
+        "parameters": [
+          {
+            "name": "filename",
+            "in": "query",
+            "description": "Filename in format PROVIDER_CODE.xml.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dbname",
+            "in": "query",
+            "description": "Destination database name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "upindex",
+            "in": "query",
+            "description": "Optionally updates indexes",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "File format *QuakeML*",
+          "required": true,
+          "content": {
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/quakeml"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Nodata.",
+            "content": {}
+          },
+          "400": {
+            "description": "Bad request due to improper specification, unrecognized parameter, duplicate identifier, etc.",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized, authentication required.",
+            "content": {}
+          },
+          "403": {
+            "description": "Authentication failed or access blocked to restricted data.",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error.",
+            "content": {}
+          },
+          "503": {
+            "description": "Service temporarily unavailable, used in maintenance and error condition.s",
+            "content": {}
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Event management",
+        "description": "Delete event Quakeml from database",
+        "operationId": "delete-event",
+        "parameters": [
+          {
+            "name": "filename",
+            "in": "query",
+            "description": "Filename in format PROVIDER_CODE.xml, no other parameters needed",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dbname",
+            "in": "query",
+            "description": "destination database name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "in": "query",
+            "description": "First part of filename of events to be removed, usually provider string:INGV.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "erase",
+            "in": "query",
+            "description": "If history is enabled and erase=false (default), the DELETE operation closes the validity interval of the active version without removing historical data. If erase=true, all versions of the event are permanently removed.",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "upindex",
+            "in": "query",
+            "description": "optionally updates indexes",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "default": "Deleted resource: EXAMPLE_CODE.xml"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Nodata.",
+            "content": {}
+          },
+          "400": {
+            "description": "Bad request due to improper specification, unrecognized parameter, parameter value out of range, etc.",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized, authentication required",
+            "content": {}
+          },
+          "403": {
+            "description": "Authentication failed or access blocked to restricted data",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "503": {
+            "description": "Service temporarily unavailable, used in maintenance and error conditions",
+            "content": {}
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/settings": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Server settings",
+        "operationId": "getSettings",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Settings"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Server settings",
+        "operationId": "setSettings",
+        "requestBody": {
+          "description": "Settings XML object, there are no required elements",
+          "required": true,
+          "content": {
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Settings"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success, new settings applied"
+          },
+          "400": {
+            "description": "Syntax error"
+          },
+          "401": {
+            "description": "Unauthorized, authentication required"
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/management/reindex": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Database re-index operation",
+        "description": "Not implemented jet",
+        "operationId": "getReindexManagement",
+        "responses": {
+          "200": {
+            "description": "Success. Management operation completed"
+          },
+          "400": {
+            "description": "Syntax error"
+          },
+          "401": {
+            "description": "Unauthorized, authentication required"
+          },
+          "500": {
+            "description": "Failed applying operation"
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/management/eventindex": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Auxiliary Event Database re-index operation",
+        "operationId": "getEventindexManagement",
+        "responses": {
+          "200": {
+            "description": "Success. Management operation completed"
+          },
+          "400": {
+            "description": "Syntax error"
+          },
+          "401": {
+            "description": "Unauthorized, authentication required"
+          },
+          "500": {
+            "description": "Failed applying operation"
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/management/databases_info": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Databases summary information",
+        "operationId": "getDatabasesInfoManagement",
+
+        "responses": {
+          "200": {
+            "description": "Success. Management operation completed",
+            "content": {
+              "application/xml": {
+               "schema": {
+                  "$ref": "#/components/schemas/databases"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Syntax error"
+          },
+          "401": {
+            "description": "Unauthorized, authentication required"
+          },
+          "500": {
+            "description": "Failed applying operation"
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/swagger.json": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "SwaggerJson",
+        "description": "Get swagger.json",
+        "operationId": "SwaggerJson",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/representation_A_JSON_Schema_for_Swagger_2_0_API"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/identifier/handle/{prefix}/{suffix}": {
+      "get": {
+        "tags": [
+          "fdsnws-event-1.2-INGV-Extension"
+        ],
+        "summary": "Handle entry point",
+        "description": "Get a QuakeML file by handle",
+        "operationId": "identifier",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/quakeml"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Nodata.",
+            "content": {}
+          },
+          "400": {
+            "description": "Bad request due to improper specification, unrecognized parameter, parameter value out of range, etc.",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "503": {
+            "description": "Service temporarily unavailable, used in maintenance and error conditions",
+            "content": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "prefix",
+            "in": "path",
+            "description": "Handle prefix",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 11099
+          },
+          {
+            "name": "suffix",
+            "in": "path",
+            "description": "Handle suffix",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "c51c255c-c4d3-11ee-98e6-0242ac120008?urlappend=%3Fversion=2"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "schemes": {
+        "title": "schemes",
+        "type": "string",
+        "enum": [
+          "http",
+          "https",
+          "ws",
+          "wss"
+        ]
+      },
+      "representation_A_JSON_Schema_for_Swagger_2_0_API": {
+        "title": "JSON Schema for Swagger 2.0 API",
+        "required": [
+          "paths",
+          "swagger"
+        ],
+        "type": "object",
+        "properties": {
+          "swagger": {
+            "type": "object",
+            "properties": {},
+            "description": "The Swagger version of this document."
+          },
+          "host": {
+            "type": "string",
+            "description": "The host (name or ip) of the API. Example: 'swagger.io'"
+          },
+          "basePath": {
+            "type": "string",
+            "description": "The base path to the API. Example: '/api'."
+          },
+          "schemes": {
+            "type": "array",
+            "description": "The transfer protocol of the API.",
+            "items": {
+              "$ref": "#/components/schemas/schemes"
+            }
+          },
+          "consumes": {
+            "type": "array",
+            "description": "A list of MIME types accepted by the API.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "produces": {
+            "type": "array",
+            "description": "A list of MIME types the API can produce.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "paths": {
+            "type": "string",
+            "description": "Relative paths to the individual endpoints. They must be relative to the 'basePath'."
+          },
+          "definitions": {
+            "type": "string",
+            "description": "One or more JSON objects describing the schemas being consumed and produced by the API."
+          },
+          "parameters": {
+            "type": "string",
+            "description": "One or more JSON representations for parameters"
+          },
+          "responses": {
+            "type": "string",
+            "description": "One or more JSON representations for responses"
+          },
+          "security": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "securityDefinitions": {
+            "type": "string"
+          }
+        },
+        "description": ""
+      },
+      "Settings": {
+        "title": "XML schema for server settings",
+        "type": "object",
+        "xml": {
+              "wrapped": false
+            },
+        "properties": {
+          "enable_log": {
+            "type": "boolean"
+          },
+          "enable_debug": {
+            "type": "boolean",
+            "default": false
+          },
+          "enable_query_log": {
+            "type": "boolean"
+          },
+          "history": {
+            "description": "Enable the history feature, saving all version",
+            "type": "boolean"
+          },
+          "enable_handle_check": {
+            "description": "Enable check of handle identifiers",
+            "type": "boolean"
+          },
+          "publicID_format": {
+            "description": "Format of publicID valid in query",
+            "type": "string",
+            "default": "full",
+            "enum": [
+                "full",
+                "last"
+            ]
+          },
+          "results_limit": {
+            "description": "Max number of events emitted as result",
+            "type": "integer",
+            "default": 1000
+          }
+        }
+      },
+      "databases": {
+        "title": "XML schema for databases info",
+        "type": "object",
+        "xml": {
+              "wrapped": false
+            },
+        "required": [
+          "database"
+        ],
+        "properties": {
+          "database": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "$ref": "#/components/schemas/database"
+            }
+          }
+          }
+      },
+      "database": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "default": "database1-CTL-CAT01",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "minlatitude": {
+            "type": "float",
+            "default": "34.8393",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "maxlatitude": {
+            "type": "float",
+            "default": "48.3696",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "minlongitude": {
+            "type": "float",
+            "default": "4.8343",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "maxlongitude": {
+            "type": "float",
+            "default": "15.4566",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "starttime": {
+            "type": "datetime",
+            "default": "2000-04-01T00:00:00",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "endtime": {
+            "type": "datetime",
+            "default": "2021-05-02T00:00:00",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "eventcount": {
+            "type": "integer",
+            "default": "3355",
+            "xml": {
+              "attribute": true
+            }
+          }
+        }
+      },
+      "quakeml": {
+        "required": [
+          "eventParameters"
+        ],
+        "type": "object",
+        "properties": {
+          "eventParameters": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "$ref": "#/components/schemas/eventParameters"
+            }
+          }
+        }
+      },
+      "eventParameters": {
+        "required": [
+          "event"
+        ],
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "$ref": "#/components/schemas/event"
+            }
+          }
+        }
+      },
+      "event": {
+        "required": [
+          "origin",
+          "magnitude"
+        ],
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "$ref": "#/components/schemas/origin"
+            }
+          },
+          "magnitude": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "$ref": "#/components/schemas/magnitude"
+            }
+          }
+        }
+      },
+      "origin": {
+        "type": "object",
+        "properties": {
+          "info": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "type": "string",
+              "default": "Continues..."
+            }
+          }
+        }
+      },
+      "magnitude": {
+        "type": "object",
+        "properties": {
+          "info": {
+            "type": "array",
+            "xml": {
+              "wrapped": false
+            },
+            "items": {
+              "type": "string",
+              "default": "Continues..."
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  }
+}
