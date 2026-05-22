@@ -1,0 +1,122 @@
+services:
+
+  proxy:
+    restart: "unless-stopped"      
+    image: nginx
+    volumes:
+      - type: bind
+        source: ./proxy/nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true
+      - type: bind
+        source: ./builder
+        target: /var/www/event-builder
+        read_only: true
+    ports:
+      - 8081:80
+    depends_on:
+      - x-fdsn-event-1
+#      - x-fdsn-event-2
+    networks:
+            - event-net
+
+  x-fdsn-event-1:
+    restart: "unless-stopped"
+    container_name: x-fdsn-event-1
+    build:
+      context: .
+      target: deploy
+    #To avoid docker-compose close the service
+    tty: true
+    volumes:
+    # Persistent volume on data dir
+            - type: bind
+              source: ./data
+              target: /srv/basex/data
+    # Persistent volume for application code
+            - type: bind
+              source: ./repo
+              target: /srv/basex/repo
+    # Persistent volume for application restxq entry point
+            - type: bind
+              source: ./restxq/event.xq
+              target: /srv/basex/webapp/event.xq
+    networks:
+            - event-net
+
+  x-fdsn-event-2:
+    restart: "unless-stopped"
+    container_name: x-fdsn-event-2
+    build:
+      context: .
+      target: deploy
+    #To avoid docker-compose close the service
+    tty: true
+    volumes:
+    # Persistent volume on data dir
+            - type: bind
+              source: ./data
+              target: /srv/basex/data
+    # Persistent volume for application code
+            - type: bind
+              source: ./repo
+              target: /srv/basex/repo
+    # Persistent volume for application restxq entry point
+            - type: bind
+              source: ./restxq/event.xq
+              target: /srv/basex/webapp/event.xq
+    networks:
+            - event-net
+  
+  x-fdsn-event-3:
+    restart: "unless-stopped"
+    container_name: x-fdsn-event-3
+    build:
+      context: .
+      target: deploy
+    #To avoid docker-compose close the service
+    tty: true
+    volumes:
+    # Persistent volume on data dir
+            - type: bind
+              source: ./data
+              target: /srv/basex/data
+    # Persistent volume for application code
+            - type: bind
+              source: ./repo
+              target: /srv/basex/repo
+    # Persistent volume for application restxq entry point
+            - type: bind
+              source: ./restxq/event.xq
+              target: /srv/basex/webapp/event.xq
+    networks:
+            - event-net
+  
+  x-fdsn-event-4:
+    restart: "unless-stopped"
+    container_name: x-fdsn-event-4
+    build:
+      context: .
+      target: deploy
+    #To avoid docker-compose close the service
+    tty: true
+    volumes:
+    # Persistent volume on data dir
+            - type: bind
+              source: ./data
+              target: /srv/basex/data
+    # Persistent volume for application code
+            - type: bind
+              source: ./repo
+              target: /srv/basex/repo
+    # Persistent volume for application restxq entry point
+            - type: bind
+              source: ./restxq/event.xq
+              target: /srv/basex/webapp/event.xq
+    networks:
+            - event-net
+
+
+
+networks:
+          event-net:
