@@ -98,7 +98,7 @@ declare
   %rest:GET
   %output:method("text")
 function event:version() {
-  '1.69.1'
+  '1.0.1'
 };
 
 declare
