@@ -1,0 +1,20 @@
+<users>
+  <user name="admin" permission="admin">
+    <password algorithm="digest">
+      <hash>304bdfb0383c16f070a897fc1eb25cb4</hash>
+    </password>
+    <password algorithm="salted-sha256">
+      <salt>25663411423528</salt>
+      <hash>9705755af36625e83de5a756864b232bc12bb2d2b81265327ea8229590bc4f18</hash>
+    </password>
+  </user>
+  <user name="fdsn" permission="admin">
+    <password algorithm="digest">
+      <hash>9f7d87741d22ec23320f15f8c182643d</hash>
+    </password>
+    <password algorithm="salted-sha256">
+      <salt>11423238159055</salt>
+      <hash>86c46e5d6efc71b2609db7ad15d05aaf151ce97402cded3ad3bcfeebc1189dfd</hash>
+    </password>
+  </user>
+</users>
